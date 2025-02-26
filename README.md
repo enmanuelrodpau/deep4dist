@@ -106,5 +106,3 @@ Deep4Dist dataset is released under the CCBY-4.0 and the code under Apache 2.0 L
 ## Contact
 
 For questions or contributions, open an issue in this repository.
-
-s
