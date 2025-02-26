@@ -66,19 +66,19 @@ pip install -r requirements.txt
 The repository provides all necessary code and configurations to reproduce the experiments presented in the dataset paper. Each experiment has its own configuration YAML file located in the config folder. The following commands can be used to reproduce different stages of the experiments:
 
 - **Train a model:**
-sh
+```sh
 python src/train.py ./config/train.yml
 
 - **Evaluate test set metrics:**
-sh
+```sh
 python src/test_metrics.py ./config/test_metrics.yml
 
 -**Perform channel ablation analysis:**
-sh
+```sh
 python src/ablation_metrics.py ./config/ablation_metrics.yml
 
 -**Generate class activation maps (CAMs):**
-sh
+```sh
 python src/generate_cam.py ./config/generate_cam.yml
 
 ## Citation
