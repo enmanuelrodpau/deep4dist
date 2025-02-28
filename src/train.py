@@ -22,11 +22,11 @@ def run_train(config: dict):
     
     path_to_data = Path(config["path_data"])
     
-    train_list = [[path_to_data/"train"/"image"/f"{tile}.tif" for tile in splits[1]],
-    [path_to_data/"train"/"mask"/f"{tile}.tif" for tile in splits[1]]]
+    train_list = [[(path_to_data/"train"/"image"/f"{tile}.tif").as_posix() for tile in splits[1]],
+    [(path_to_data/"train"/"mask"/f"{tile}.tif").as_posix() for tile in splits[1]]]
     
-    val_list = [[path_to_data/"validation"/"image"/f"{tile}.tif" for tile in splits[2]],
-    [path_to_data/"validation"/"mask"/f"{tile}.tif" for tile in splits[2]]]
+    val_list = [[(path_to_data/"validation"/"image"/f"{tile}.tif").as_posix() for tile in splits[2]],
+    [(path_to_data/"validation"/"mask"/f"{tile}.tif").as_posix() for tile in splits[2]]]
         
     use_augmentations = K.container.ImageSequential(
                 K.RandomChannelDropout(num_drop_channels=2, fill_value=0.0, p=0.5, same_on_batch =False),
