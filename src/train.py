@@ -22,23 +22,12 @@ def run_train(config: dict):
     
     path_to_data = Path(config["path_data"])
     
-    # train_list = [[path_to_data/"train"/"image"/f"{tile}.tif" for tile in splits[1]],
-    # [path_to_data/"train"/"mask"/f"{tile}.tif" for tile in splits[1]]]
+    train_list = [[path_to_data/"train"/"image"/f"{tile}.tif" for tile in splits[1]],
+    [path_to_data/"train"/"mask"/f"{tile}.tif" for tile in splits[1]]]
     
-    # val_list = [[path_to_data/"validation"/"image"/f"{tile}.tif" for tile in splits[2]],
-    # [path_to_data/"validation"/"mask"/f"{tile}.tif" for tile in splits[2]]]
-    
-    # test_list = [[path_to_data/"test"/"image"/f"{tile}.tif" for tile in splits[0]],
-    # [path_to_data/"test"/"mask"/f"{tile}.tif" for tile in splits[0]]]
-    
-    train_list = [[f"{path_to_data}/{tile}/vhr/img{tile[-8:]}.tif" for tile in splits[1]],
-    [f"{path_to_data}/{tile}/vhr/msk{tile[-8:]}.tif" for tile in splits[1]]]
-    
-    val_list = [[f"{path_to_data}/{tile}/vhr/img{tile[-8:]}.tif" for tile in splits[2]],
-    [f"{path_to_data}/{tile}/vhr/msk{tile[-8:]}.tif" for tile in splits[2]]]
-    test_list = [[f"{path_to_data}/{tile}/vhr/img{tile[-8:]}.tif" for tile in splits[0]],
-    [f"{path_to_data}/{tile}/vhr/msk{tile[-8:]}.tif" for tile in splits[0]]]
-    
+    val_list = [[path_to_data/"validation"/"image"/f"{tile}.tif" for tile in splits[2]],
+    [path_to_data/"validation"/"mask"/f"{tile}.tif" for tile in splits[2]]]
+        
     use_augmentations = K.container.ImageSequential(
                 K.RandomChannelDropout(num_drop_channels=2, fill_value=0.0, p=0.5, same_on_batch =False),
                 K.RandomVerticalFlip(p=0.5, same_on_batch =False),
