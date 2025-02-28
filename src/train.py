@@ -103,6 +103,7 @@ def run_train(config: dict):
     )
         
     trainer.fit(seg_module, datamodule=data_module)
+    trainer.validate(model, datamodule=data_module)
 
 def main(config_path:str):
         
