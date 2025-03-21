@@ -50,7 +50,7 @@ Deep4Dist/
 
 ## Downloading the Dataset
 
-The dataset is openly available at: [Zenodo](https://10.5281/zenodo.14884819)
+The dataset is openly available at: [Zenodo](https://zenodo.org/records/14884819)
 
 ## Environment Setup
 
