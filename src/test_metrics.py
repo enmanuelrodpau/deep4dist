@@ -5,7 +5,7 @@ import torch
 from pathlib import Path
 from torchmetrics import MetricCollection, MeanMetric
 from torchmetrics.classification import  JaccardIndex,  Accuracy, F1Score, ConfusionMatrix, CohenKappa
-from dataset import CustomDataset
+from dataset import Deep4DistDataset
 from model import UNetModel
 from utils import read_config, print_config
 from torch.utils.data import DataLoader
@@ -28,7 +28,7 @@ def run_metrics(config: dict):
     
     num_classes=int(config['num_classes'])
                  
-    dataset = CustomDataset( 
+    dataset = Deep4DistDataset( 
                  img_list = test_list[0], 
                  msk_list=test_list[1], 
                  channels=list(range(1, config['num_channels_aerial']+1)),
