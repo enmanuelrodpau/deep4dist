@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import torch
 from pathlib import Path
-from dataset import CustomDataset
+from dataset import Deep4DistDataset
 from model import UNetModel
 from utils import read_config, print_config, save_mask
 from torch.utils.data import DataLoader
@@ -61,7 +61,7 @@ def run_cam(config: dict):
     
     save_dir = Path(config['out_folder']) / config['cam_type']
     
-    dataset = CustomDataset( 
+    dataset = Deep4DistDataset( 
                  img_list = test_list[0], 
                  msk_list=test_list[1], 
                  channels=list(range(1, config['num_channels_aerial']+1)),
