@@ -10,7 +10,7 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 
-from dataset import DataModule
+from dataset import Deep4DistDM
 from model import UNetModel
 from utils import read_config, print_config
 import kornia.augmentation as K
@@ -38,7 +38,7 @@ def run_train(config: dict):
             )
             
                  
-    data_module = DataModule(train_list,
+    data_module = Deep4DistDM(train_list,
                                    val_list,
                                    batch_size= int(config["batch_size"]),
                                    num_workers= int(config["num_workers"]),
