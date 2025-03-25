@@ -17,7 +17,7 @@ def min_max_normalize(tensor, q_low, q_hi):
     tensor = (tensor - q_low) / denominator
     return tensor
 
-class CustomDataset(Dataset):
+class Deep4DistDataset(Dataset):
     def __init__(self, 
                  img_list, 
                  msk_list=None, 
@@ -92,7 +92,7 @@ class CustomDataset(Dataset):
         
         return {'img': img, 'msk': msk, 'img_pth': img_pth} if msk is not None else {'img': img, 'img_pth': img_pth}
 
-class DataModule(pl.LightningDataModule):
+class Deep4DistDM(pl.LightningDataModule):
     def __init__(self, train_list, val_list, batch_size=2, num_workers=1, use_augmentations=None,
                  channels=[1, 2, 3, 4, 5], num_classes=4, norm_function=None,
                  means=None, stds=None, q_low=None, q_hi=None, padding=False, target_size=[512, 512]):
@@ -113,7 +113,7 @@ class DataModule(pl.LightningDataModule):
         self.target_size = target_size
     def setup(self, stage=None):
         if stage == 'fit' or stage is None:
-            self.train_dataset = CustomDataset(
+            self.train_dataset = Deep4DistDataset(
                 img_list = self.train_list[0], 
                 msk_list = self.train_list[1], 
                 channels = self.channels, 
@@ -127,7 +127,7 @@ class DataModule(pl.LightningDataModule):
                 padding = self.padding, 
                 target_size = self.target_size
             )
-            self.val_dataset = CustomDataset(
+            self.val_dataset = Deep4DistDataset(
                 img_list = self.val_list[0], 
                 msk_list = self.val_list[1], 
                 channels = self.channels, 
