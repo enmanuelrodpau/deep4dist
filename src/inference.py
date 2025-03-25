@@ -10,7 +10,7 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 
-from dataset import DataModule
+from dataset import Deep4DistDataset
 from model import UNetModel
 from utils import read_config, print_config
 from torch.utils.data import DataLoader
@@ -30,7 +30,7 @@ def run_inference(config: dict):
     
     num_classes=int(config["num_classes"])
                  
-    dataset = CustomDataset( 
+    dataset = Deep4DistDataset( 
                  img_list = inference_list[0], 
                  msk_list=inference_list[1], 
                  channels=[1, 2, 3, 4, 5],
