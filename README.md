@@ -90,11 +90,21 @@ The repository provides all necessary code and configurations to reproduce the e
 If you use Deep4Dist in your research, please cite:
 
 ```
-@article{your_citation,
-  author    = {},
-  title     = {},
-  journal   = {},
-  year      = {}
+@dataset{rodriguez_paulino_2025_14884819,
+  author       = {Rodríguez-Paulino, Enmanuel and
+                  Stoffels, Johannes and
+                  Schlerf, Martin and
+                  Röder, Achim and
+                  Wagner, Alexander and
+                  Udelhoven, Thomas},
+  title        = {A high-resolution dataset for forest disturbance
+                   mapping
+                  },
+  month        = feb,
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.14884819},
+  url          = {https://doi.org/10.5281/zenodo.14884819},
 }
 ```
 
