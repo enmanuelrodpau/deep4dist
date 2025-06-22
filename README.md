@@ -15,7 +15,7 @@ To validate the dataset’s utility, we conducted a study using a U-Net architec
 
 | Model       | Parameters | Checkpoint                                                          |
 |------------|------------|-------------------------------------------------------------------|
-| ResU-net-34 | 24.4M      | [Download](https://huggingface.co/enmanuelrp/Dee4Dist-ResU-net-34/) |
+| ResU-net-34 | 24.4M      | [Download](https://huggingface.co/enmanuelrp/Deep4Dist-ResU-net-34/) |
 
 ## Features
 
