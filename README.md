@@ -1,4 +1,4 @@
-# A high-resolution dataset for forest disturbance mapping
+# Deep Learning For Forest Disturbance mapping (Deep4Dist)
 This repository hosts the code and notebooks used in the article A high-resolution dataset for forest disturbance mapping*.
 
 ## Overview
