@@ -80,10 +80,6 @@ The repository provides all necessary code and configurations to reproduce the e
   ```sh
   python src/ablation_metrics.py ./config/ablation_metrics.yml
   ```
-- **Generate class activation maps (CAMs):**
-  ```sh
-  python src/generate_cam.py ./config/generate_cam.yml
-  ```
 
 ## Citation
 
