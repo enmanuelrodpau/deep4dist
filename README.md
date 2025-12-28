@@ -18,9 +18,9 @@ The dataset has been meticulously curated with high-quality annotations and deta
 
 This repository is organized into dedicated branches to clearly separate dataset construction from benchmark experimentation:
 
-- **dataset branch[https://github.com/enmanuelrodpau/deep4dist/tree/main/dataset]:** Contains all files, scripts, and metadata required to re-create the Deep4Dist dataset, including data preprocessing and annotation-related resources.
+- **[dataset branch](https://github.com/enmanuelrodpau/deep4dist/tree/main/dataset):** Contains all files, scripts, and metadata required to re-create the Deep4Dist dataset, including data preprocessing and annotation-related resources.
 
-- **benchmark branch[https://github.com/enmanuelrodpau/deep4dist/tree/main/benchmark]:** Contains the code and configuration files necessary to run the benchmark experiments, including model training, evaluation pipelines, and reproducibility settings.
+- **[benchmark branch](https://github.com/enmanuelrodpau/deep4dist/tree/main/benchmark):** Contains the code and configuration files necessary to run the benchmark experiments, including model training, evaluation pipelines, and reproducibility settings.
 
 ## Downloading the Dataset
 
