@@ -1,0 +1,10 @@
+r-doparallel
+r-dosnow
+r-dplyr
+r-foreach
+r-future
+r-parallelly
+r-purrr
+r-raster
+r-sf
+r-terra

@@ -1,26 +1,27 @@
-# Deep Learning For Forest Disturbance mapping (Deep4Dist)
-This repository hosts the code used to create the dataset in the article A high-resolution dataset for forest disturbance mapping*.
+# Dataset Creation
+This repository hosts the code used to create the dataset in the paper.
 
-## Code Structure
-*
-*
-*
+To download the raw data (DOP images, Point Clouds and DEM) use:
+``` sh	
+wget -i *_download_url.txt --no-check-certificate -nc 
 
+```
+Note that DOP images are constantly updated and therefore their location in the geobasis-rlp.de[geobasis-rlp.de] server might have changed. Similarly for the BDOM (point cloud) products.
 
-## Downloading the Dataset
-
-The dataset is openly available at: [Zenodo](https://zenodo.org/records/14884819)
+## Structure
+*dop_download*: links to download the raw data
+*processing*: Rscripts used to generate the dataset
+*vector*: disturbance database for Rhineland-Palatinate
+*aux*: directory for auxiliary data
 
 ## Environment Setup
 
 To set up the required R environment, follow these steps:
 
 ```sh
-conda create -n deep4dist -c conda-forge python=3.11.6 
-conda activate deep4dist 
-git clone git@github.com:enmanuelrodpau/.git
-cd deep4dist 
-pip install -r requirements.txt
+conda create -n deep4distR  
+conda activate deep4distR 
+conda install -c conda-forge r-base=4.3.1 --file requirements.txt
 ```
 
 ## Citation
