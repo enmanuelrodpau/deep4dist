@@ -6,7 +6,7 @@ To download the raw data (DOP images, Point Clouds and DEM) use:
 wget -i *_download_url.txt --no-check-certificate -nc 
 
 ```
-Note that DOP images are constantly updated and therefore their location in the geobasis-rlp.de[geobasis-rlp.de] server might have changed. Similarly for the BDOM (point cloud) products.
+Note that DOP images are constantly updated and therefore their location in the [geobasis-rlp.de](geobasis-rlp.de) server might have changed. Similarly for the BDOM (point cloud) products.
 
 ## Structure
 *dop_download*: links to download the raw data
