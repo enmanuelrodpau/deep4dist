@@ -25,7 +25,7 @@ conda install -c conda-forge r-base=4.3.1 --file requirements.txt
 wget -i *_download_url.txt --no-check-certificate -nc 
 
 ```
-Note that DOP images are constantly updated and therefore their location in the geobasis-rlp.de[geobasis-rlp.de] server might have changed. Similarly for the BDOM (point cloud) products.
+Note that DOP images are constantly updated and therefore their location in the geobasis-rlp.de(geobasis-rlp.de) server might have changed. Similarly for the BDOM (point cloud) products.
 
 2) Preprocess the downloaded data
  - 2.1 Run the *01_convert_polygons_to_mask.R* script. It rasterizes the disturbance polygons and save them as geotiff files matching the extent of the DOP.
