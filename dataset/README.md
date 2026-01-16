@@ -2,10 +2,10 @@
 This repository hosts the code used to create the dataset in the paper.
 
 ## Structure
-*dop_download*: links to download the raw data
-*processing*: Rscripts used to generate the dataset
-*vector*: disturbance database for Rhineland-Palatinate
-*aux*: directory for auxiliary data
+- *dop_download*: links to download the raw data
+- *processing*: Rscripts used to generate the dataset
+- *vector*: disturbance database for Rhineland-Palatinate
+- *aux*: directory for auxiliary data
 
 ## Environment Setup
 
