@@ -1,5 +1,5 @@
 # Deep Learning For Forest Disturbance mapping (Deep4Dist)
-This repository hosts the code and notebooks used in the article A high-resolution dataset for forest disturbance mapping*.
+This repository hosts the code and notebooks used in the article **[An AI-ready remote sensing dataset for high-resolution forest disturbance mapping](https://www.nature.com/articles/s41597-026-07084-8)**.
 
 ## Overview
 
